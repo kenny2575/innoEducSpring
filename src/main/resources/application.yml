@@ -1,1 +1,12 @@
-spring.application.name=SpringFileReadWrite
+spring:
+  application.name: SpringFileReadWrite
+  datasource:
+    driver-class-name: org.postgresql.Driver
+    url: jdbc:postgresql://${DB_URL}/Study_DB
+    username: ${DB_USERNAME}
+    password: ${DB_PASSWORD}
+reader:
+  path: "src${file.separator}main${file.separator}resources${file.separator}files"
+writer:
+  path: "src${file.separator}main${file.separator}resources${file.separator}errors"
+  fileName: "errors.log"

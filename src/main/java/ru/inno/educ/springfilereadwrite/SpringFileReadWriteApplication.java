@@ -9,5 +9,4 @@ public class SpringFileReadWriteApplication {
 	public static void main(String[] args) {
 		SpringApplication.run(SpringFileReadWriteApplication.class, args);
 	}
-
 }
