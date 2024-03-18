@@ -10,7 +10,8 @@ import java.nio.file.StandardOpenOption;
 
 @Component
 public class LogWriter {
-    @Value("${logWrite.path}")
+
+    @Value("${log.writePath}")
     private Path logFile;
 
     public void saveLog(String logData) throws IOException {
