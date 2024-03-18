@@ -7,6 +7,7 @@ import ru.inno.educ.springfilereadwrite.entity.User;
 import ru.inno.educ.springfilereadwrite.enums.ApplicationTypeCode;
 import ru.inno.educ.springfilereadwrite.model.LogLine;
 import ru.inno.educ.springfilereadwrite.service.LoginHandlerService;
+import ru.inno.educ.springfilereadwrite.utils.LogTransformation;
 
 import java.util.List;
 import java.util.Map;
@@ -25,6 +26,7 @@ public class LoginHandler implements LoginHandlerService<LogLine> {
     }
 
     @Override
+    @LogTransformation
     public List<Login> parseSource(List<LogLine> source) {
         return source
                 .stream()

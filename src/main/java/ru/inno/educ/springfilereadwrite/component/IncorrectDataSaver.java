@@ -26,7 +26,7 @@ public class IncorrectDataSaver {
 
     public void writeUnsavedDataToLog(List<Login> unsavedData) throws IOException {
         var file = new File(filePath.toString() + File.separator + fileName);
-        try (FileWriter fileWriter = new FileWriter(file)) {
+        try (FileWriter fileWriter = new FileWriter(file, true)) {
 
             StatefulBeanToCsv<Login> sbc = new StatefulBeanToCsvBuilder<Login>(fileWriter)
                     .withSeparator(CSVWriter.DEFAULT_SEPARATOR)

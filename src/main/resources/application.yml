@@ -10,3 +10,5 @@ reader:
 writer:
   path: "src${file.separator}main${file.separator}resources${file.separator}errors"
   fileName: "errors.log"
+log:
+  writePath: src${file.separator}main${file.separator}resources${file.separator}applicationLog.log"

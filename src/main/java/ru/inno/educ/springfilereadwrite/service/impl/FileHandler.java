@@ -6,6 +6,7 @@ import org.springframework.stereotype.Service;
 import ru.inno.educ.springfilereadwrite.component.Reader;
 import ru.inno.educ.springfilereadwrite.model.LogLine;
 import ru.inno.educ.springfilereadwrite.service.FileHandlerService;
+import ru.inno.educ.springfilereadwrite.utils.LogTransformation;
 
 import java.io.IOException;
 import java.nio.file.Path;
@@ -21,6 +22,7 @@ public class FileHandler implements FileHandlerService<LogLine> {
     private final Reader reader;
 
     @Override
+    @LogTransformation
     public List<LogLine> getDataFromFiles() {
         log.info("readAndWrite {}", reader.getFolder());
         var logLines = new ArrayList<LogLine>();

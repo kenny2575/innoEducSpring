@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import ru.inno.educ.springfilereadwrite.entity.User;
 import ru.inno.educ.springfilereadwrite.model.LogLine;
 import ru.inno.educ.springfilereadwrite.service.UserHandlerService;
+import ru.inno.educ.springfilereadwrite.utils.LogTransformation;
 
 import java.util.List;
 import java.util.stream.Collectors;
@@ -13,6 +14,7 @@ import java.util.stream.Collectors;
 public class UserHandler implements UserHandlerService<LogLine> {
 
     @Override
+    @LogTransformation
     public List<User> parseSource(List<LogLine> source) {
 
         return source
